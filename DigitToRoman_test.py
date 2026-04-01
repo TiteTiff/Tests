@@ -1,5 +1,7 @@
 import unittest
+
 import DigitToRoman
+
 
 class DigitToRoman_test(unittest.TestCase):
     def test_one(self):
@@ -13,3 +15,9 @@ class DigitToRoman_test(unittest.TestCase):
 
     def test_four(self):
         self.assertEqual(DigitToRoman.DigitToRoman.int_to_roman(4), "IV")
+
+    def test_max_number(self):
+        self.assertEqual(DigitToRoman.DigitToRoman.int_to_roman(3999), "MMMCMXCIX")
+
+    def test_forty_nine(self):
+        self.assertEqual(DigitToRoman.DigitToRoman.int_to_roman(49), "XLIX")
